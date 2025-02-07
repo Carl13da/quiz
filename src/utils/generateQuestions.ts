@@ -347,63 +347,6 @@ const allMultipleChoice = [
   },
 ];
 
-const allFunnyQuestions = [
-  'Se eu fosse um lanche, qual seria? Hambúrguer, pastel ou coxinha?',
-  'Já tentei colar na escola e falhei miseravelmente.',
-  'Se minha vida fosse um filme de comédia, qual seria o título?',
-  'Qual superpoder inútil eu teria? Voar 10cm do chão, ver no escuro só quando já tem luz, ou entender tudo que um cachorro diz mas não poder responder?',
-  'Se eu tivesse que escolher entre comer só comida salgada ou só doce para sempre, o que eu escolheria?',
-  'Qual foi a coisa mais sem sentido que já acreditei quando era criança?',
-  'Se eu fosse um personagem de desenho animado, qual seria?',
-  "Já dei 'tchau' para alguém e percebi que a pessoa não estava falando comigo?",
-  'Se eu tivesse que trocar meu nome por um nome engraçado, qual seria?',
-  'Se um dia eu me perdesse no shopping, o que eu faria primeiro? A) Entrar numa loja e fingir que trabalho lá, B) Pegar um microfone e me anunciar, C) Sentar e aceitar o destino.',
-  'Já chorei de rir em um momento em que não podia rir?',
-  'Se eu pudesse apagar uma vergonha que passei, qual seria?',
-  'Se eu fosse um pastel de feira, qual seria o meu recheio?',
-  'Qual foi o pior presente que eu já recebi?',
-  'Se eu tivesse que viver em um único aplicativo de celular, qual seria? WhatsApp, Instagram ou YouTube?',
-  'Se eu fosse dar um nome para um sapo de estimação, qual seria?',
-  'Já entrei num cômodo e esqueci completamente o que fui fazer lá?',
-  'Se eu pudesse fazer qualquer coisa sem ninguém julgar, o que seria?',
-  'Já levei um susto de algo completamente idiota?',
-  'Se minha risada tivesse um efeito sonoro engraçado, qual seria?',
-  'Se eu tivesse que usar uma fantasia ridícula por um dia inteiro, qual eu escolheria?',
-  'Se eu fosse uma comida, qual seria a minha maior qualidade e meu maior defeito?',
-  'Se eu tivesse que virar um animal por um dia, qual seria e por quê?',
-  'Qual foi a coisa mais aleatória que já aconteceu comigo?',
-  'Se eu fosse um filtro de Instagram, qual seria?',
-  'Se eu tivesse que trocar de vida com um personagem de novela por um dia, quem seria?',
-  'Se um alienígena me sequestrasse, qual seria a primeira coisa que eu perguntaria?',
-  'Se eu só pudesse assistir UM filme para o resto da vida, qual seria?',
-  'Se eu pudesse adicionar um feriado absurdo no calendário, qual seria e o que faríamos nele?',
-  'Se minha vida fosse um reality show, qual seria o nome?',
-  'Se eu tivesse que cantar uma música no karaokê sem errar NENHUMA palavra, qual seria?',
-  'Já tentei falar outra língua e saiu tudo errado?',
-  'Se eu tivesse que me descrever com o nome de um emoji, qual seria?',
-  'Se eu ganhasse um milhão de reais, mas tivesse que gastá-lo em 24h, o que eu compraria?',
-  'Se eu tivesse que escolher entre nunca mais comer chocolate ou nunca mais ver séries, o que eu escolheria?',
-  'Qual foi a coisa mais besta que já me fez rir por horas?',
-  'Se eu tivesse um talk show, quem seria meu primeiro convidado?',
-  'Se eu fosse um sorvete, qual sabor seria?',
-  'Se eu fosse um comercial de TV, qual seria meu bordão?',
-  'Se eu pudesse trocar de lugar com um famoso por um dia, quem seria e por quê?',
-  'Se minha vida tivesse uma trilha sonora, qual música tocaria quando eu entro num lugar?',
-  'Se eu pudesse ser o mestre em qualquer habilidade inútil, qual escolheria?',
-  'Se eu tivesse que ser um personagem de um desenho animado, qual eu seria?',
-  'Se eu tivesse que comer a mesma comida todos os dias por um ano, qual seria?',
-  'Se eu só pudesse usar uma única cor de roupa para sempre, qual cor escolheria?',
-  'Se um gênio me desse um desejo, mas só valesse para coisas bobas, o que eu pediria?',
-  'Se eu pudesse inventar um novo emoji, como ele seria?',
-  'Se eu pudesse morar dentro de um jogo de videogame, qual seria?',
-  'Se eu fosse criar um nome de Wi-Fi engraçado, qual seria?',
-  'Se eu fosse um sabor de pizza, qual seria?',
-  'Se eu só pudesse usar uma palavra para o resto da vida, qual escolheria?',
-  'Se eu fosse um fantasma e pudesse assustar uma pessoa por um dia, quem seria?',
-  'Se eu tivesse que viver dentro de um filme de comédia, qual escolheria?',
-  'Se eu pudesse ter um botão que fizesse qualquer coisa, o que ele faria?',
-];
-
 export const generateRandomQuestions = () => {
   const truthOrLie = [...allTruthOrLie]
     .sort(() => Math.random() - 0.5)
@@ -417,9 +360,6 @@ export const generateRandomQuestions = () => {
   const multipleChoice = [...allMultipleChoice]
     .sort(() => Math.random() - 0.5)
     .slice(0, 18);
-  const funnyQuestions = [...allFunnyQuestions]
-    .sort(() => Math.random() - 0.5)
-    .slice(0, 5); // 🔹 Adicionando 5 perguntas engraçadas
 
-  return { truthOrLie, haveOrNever, openEnded, multipleChoice, funnyQuestions };
+  return { truthOrLie, haveOrNever, openEnded, multipleChoice };
 };

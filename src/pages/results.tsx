@@ -23,6 +23,7 @@ const Results: React.FC = () => {
   if (!gameData) return <p>Carregando resultados...</p>;
 
   const questions = gameData.questions; // 🔹 Perguntas na ordem original
+  console.log('questions: ', questions);
   const correctAnswers = gameData.correctAnswers || {}; // 🔹 Respostas corretas no Firestore
 
   const countCorrectAnswers = (player: string) => {
@@ -31,7 +32,9 @@ const Results: React.FC = () => {
     let correct = 0;
     let incorrect = 0;
 
-    questions.forEach((q: any) => {
+    const allQuestions = Object.values(gameData.questions).flat();
+
+    allQuestions.forEach((q: any) => {
       const questionText = typeof q === 'string' ? q : q.question;
       const userAnswer = gameData.responses[player]?.[questionText];
       const correctAnswer = correctAnswers[questionText];
@@ -51,8 +54,9 @@ const Results: React.FC = () => {
 
   const renderResults = (player: string) => {
     if (!gameData.responses[player]) return <p>Nenhuma resposta registrada.</p>;
+    const allQuestions = Object.values(gameData.questions).flat();
 
-    return questions.map((q: any, index: number) => {
+    return allQuestions.map((q: any, index: number) => {
       const questionText = typeof q === 'string' ? q : q.question;
       const userAnswer = gameData.responses[player]?.[questionText];
       const correctAnswer = correctAnswers[questionText];

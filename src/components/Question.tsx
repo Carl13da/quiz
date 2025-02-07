@@ -73,8 +73,7 @@ const Question: React.FC<QuestionProps> = ({
       )}
 
       {/* 🔹 Perguntas abertas */}
-      {(question.category === 'openEnded' ||
-        question.category === 'funnyQuestions') && (
+      {question.category === 'openEnded' && (
         <input
           type='text'
           className='p-3 w-full border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500'
