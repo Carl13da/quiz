@@ -70,7 +70,6 @@ const allOpenEnded = [
   'Uma experiência emocionante que sempre sonhei viver é...',
   'Se eu pudesse viver uma aventura radical sem medo, escolheria...',
   'Se eu tivesse um passe livre para qualquer evento do mundo, escolheria...',
-  'Se eu pudesse ter um jantar especial com qualquer pessoa no mundo, escolheria...',
   'Se eu pudesse viver um grande momento de cinema na vida real, seria...',
 
   // 🎭 Momentos que Marcaram
@@ -284,16 +283,6 @@ const allMultipleChoice = [
       'Filme em casa',
       'Passeio ao ar livre',
       'Algo espontâneo',
-    ],
-  },
-  {
-    question: 'Eu me sinto mais amado(a) quando...',
-    options: [
-      'Recebo carinho físico',
-      'Ouvimos palavras gentis',
-      'Alguém faz algo por mim',
-      'Passamos tempo juntos',
-      'Recebo um presente especial',
     ],
   },
   {
