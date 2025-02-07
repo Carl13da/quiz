@@ -34,25 +34,6 @@ export const saveGameToFirebase = async (
   const gameCode = generateGameCode();
   const randomQuestions = generateRandomQuestions(); // 🔹 Gera perguntas organizadas
 
-  if (
-    !randomQuestions.truthOrLie ||
-    !randomQuestions.haveOrNever ||
-    !randomQuestions.openEnded ||
-    !randomQuestions.multipleChoice ||
-    !randomQuestions.funnyQuestions ||
-    randomQuestions.truthOrLie.length !== 10 ||
-    randomQuestions.haveOrNever.length !== 10 ||
-    randomQuestions.openEnded.length !== 7 ||
-    randomQuestions.multipleChoice.length !== 8 ||
-    randomQuestions.funnyQuestions.length !== 5
-  ) {
-    console.error(
-      '❌ Erro: O jogo não gerou 40 perguntas corretamente!',
-      randomQuestions
-    );
-    return '';
-  }
-
   try {
     await setDoc(doc(db, 'games', gameCode), {
       code: gameCode,
