@@ -37,6 +37,7 @@ const Game: React.FC = () => {
               haveOrNever,
               openEnded,
               multipleChoice,
+              funnyQuestions,
             });
 
             setGameData(data);
