@@ -62,6 +62,7 @@ export const saveGameToFirebase = async (
         haveOrNever: randomQuestions.haveOrNever,
         openEnded: randomQuestions.openEnded,
         multipleChoice: randomQuestions.multipleChoice,
+        funnyQuestions: randomQuestions.funnyQuestions,
       },
       responses: {},
     });
