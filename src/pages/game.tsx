@@ -29,6 +29,7 @@ const Game: React.FC = () => {
               haveOrNever = [],
               openEnded = [],
               multipleChoice = [],
+              funnyQuestions = [],
             } = data.questions;
 
             console.log('🔍 Perguntas carregadas do Firestore:', {
@@ -56,6 +57,10 @@ const Game: React.FC = () => {
               ...multipleChoice.map((q: any) => ({
                 ...q,
                 category: 'multipleChoice',
+              })),
+              ...funnyQuestions.map((q: any) => ({
+                ...q,
+                category: 'funnyQuestions',
               })),
             ];
 

@@ -58,21 +58,15 @@ const allOpenEnded = [
   // 💭 Sonhos e Planos para o Futuro
   'Se eu pudesse realizar um grande sonho agora, seria...',
   'Uma coisa que eu sempre quis fazer, mas ainda não tive coragem, é...',
-  'Se eu pudesse aprender uma nova habilidade ou talento, escolheria...',
-  'Se eu pudesse criar minha vida dos sonhos, ela seria assim...',
   'Se dinheiro não fosse um problema, eu investiria meu tempo e energia em...',
   'Uma experiência única que quero viver pelo menos uma vez na vida é...',
   'Se eu pudesse escolher qualquer profissão no mundo sem me preocupar com dinheiro, eu seria...',
   'Algo que eu adoraria realizar nos próximos cinco anos é...',
-  'Se eu pudesse escrever uma carta para mim no futuro, eu diria...',
   'Se eu pudesse escolher um dia perfeito, ele incluiria...',
 
   // 🌟 Experiências Inesquecíveis
   'Uma experiência que me faria extremamente feliz seria...',
-  'Se eu pudesse reviver um único dia especial da minha vida, escolheria...',
   'Uma experiência nova que eu adoraria ter é...',
-  'Se eu pudesse criar uma tradição única para minha vida, seria...',
-  'Se eu tivesse que descrever um momento que me fez sentir vivo(a), seria...',
   'Uma experiência emocionante que sempre sonhei viver é...',
   'Se eu pudesse viver uma aventura radical sem medo, escolheria...',
   'Se eu tivesse um passe livre para qualquer evento do mundo, escolheria...',
@@ -83,13 +77,7 @@ const allOpenEnded = [
   'Se eu pudesse voltar no tempo e dar um conselho para mim mesmo(a), eu diria...',
   'Se eu pudesse escolher um dia para reviver e sentir tudo de novo, seria...',
   'Um pequeno momento que mudou minha perspectiva sobre a vida foi...',
-  'Se eu pudesse transformar uma lembrança especial em um filme, seria sobre...',
   'Se eu tivesse que definir minha vida em um título de livro, seria...',
-  'O momento mais inesperado da minha vida foi...',
-  'Se eu pudesse voltar e mudar apenas um detalhe em um momento da minha vida, seria...',
-  'Se eu pudesse reviver um momento especial de infância, escolheria...',
-  'Um encontro ou conversa que mudou minha forma de pensar foi...',
-  'Se minha vida fosse dividida em capítulos, o nome do próximo capítulo seria...',
 
   // ❤️ Felicidade e Conexões
   'O que me faz sentir verdadeiramente feliz é...',
@@ -98,13 +86,196 @@ const allOpenEnded = [
   'Uma coisa que me faz sorrir imediatamente é...',
   'Se eu tivesse que descrever a sensação de estar plenamente feliz, seria...',
   'Se eu pudesse guardar um sentimento em um potinho para sempre, seria...',
-  'Algo que me faz sentir conectado(a) com o mundo e as pessoas ao meu redor é...',
-  'Se eu pudesse definir amor verdadeiro em uma frase, seria...',
-  'Se eu pudesse expressar todo o meu carinho por alguém de uma forma criativa, escolheria...',
-  'Se eu pudesse criar uma tradição de felicidade na minha vida, seria...',
 ];
 
 const allMultipleChoice = [
+  {
+    question: 'Se eu fosse um super-herói, meu superpoder inútil seria...',
+    options: [
+      'Poder abrir pacotes de salgadinho sem rasgar errado',
+      'Falar com pombos, mas eles só me xingam',
+      'Ficar invisível, mas só quando ninguém está olhando',
+      'Voar, mas só 10 cm acima do chão',
+    ],
+  },
+  {
+    question: 'Se eu tivesse que escolher um pet exótico, seria...',
+    options: [
+      'Uma capivara de estimação',
+      'Um urso panda hiperativo',
+      'Um gato que sempre me julga',
+      'Uma tartaruga ninja aposentada',
+    ],
+  },
+  {
+    question: 'Se minha vida fosse um reality show, o nome seria...',
+    options: [
+      "'Dormindo e Comendo: O Documentário'",
+      '‘Meu Deus, Que Vergonha’',
+      '‘Manual de Como Se Meter em Problemas’',
+      '‘Cadê Meu Celular?’',
+    ],
+  },
+  {
+    question: 'Se eu fosse um meme famoso, qual seria?',
+    options: [
+      "'Confused Math Lady' tentando entender tudo",
+      "'Shrek olhando desconfiado'",
+      "'O bebê chorando e depois rindo'",
+      "'O cachorro piscando devagar'",
+    ],
+  },
+  {
+    question:
+      'Se eu tivesse que comer uma comida estranha para sempre, escolheria...',
+    options: [
+      'Sorvete de feijão',
+      'Pizza de brigadeiro com queijo',
+      'Milkshake de bacon',
+      'Sushi de coxinha',
+    ],
+  },
+  {
+    question: 'Se eu me perdesse no shopping, o que eu faria?',
+    options: [
+      'Ficaria parado esperando o resgate',
+      "Pegaria o microfone e anunciaria 'me perdi!'",
+      'Entraria na loja mais cara fingindo ser milionário(a)',
+      'Abria um mapa e fingia ser explorador(a)',
+    ],
+  },
+  {
+    question: 'Se eu pudesse viver em um desenho animado, qual escolheria?',
+    options: [
+      'Bob Esponja para morar na Fenda do Biquíni',
+      'Pokémon para ter um Pikachu de estimação',
+      'Os Simpsons para não envelhecer nunca',
+      'Scooby-Doo para investigar mistérios',
+    ],
+  },
+  {
+    question:
+      'Se eu tivesse que usar apenas uma roupa pelo resto da vida, seria...',
+    options: [
+      'Pijama de unicórnio',
+      'Terno e gravata 24h por dia',
+      'Roupa inflável de dinossauro',
+      'Fantasia de banana',
+    ],
+  },
+  {
+    question: 'Se um gênio me concedesse um desejo inútil, eu pediria...',
+    options: [
+      'Sempre saber onde está meu carregador',
+      'Nunca mais pisar em Lego descalço',
+      'Ter um sinal de Wi-Fi perfeito, mas só no banheiro',
+      'Poder ver no escuro, mas só quando tem luz',
+    ],
+  },
+  {
+    question:
+      'Se eu pudesse transformar um objeto aleatório em comida, escolheria...',
+    options: [
+      'Controle remoto que vira brigadeiro',
+      'Chinelo que vira hambúrguer',
+      'Travesseiro que vira pizza',
+      'Computador que vira milkshake',
+    ],
+  },
+  {
+    question: 'Se minha risada tivesse um efeito sonoro, seria...',
+    options: [
+      'Buzina de palhaço',
+      'Som de uma cabra berrando',
+      'Efeito de explosão de filme de ação',
+      'Risada maléfica de vilão de novela',
+    ],
+  },
+  {
+    question: 'Se eu fosse criar um novo emoji, seria...',
+    options: [
+      'Um tomate chorando',
+      'Uma lhama confusa',
+      'Um cachorro julgando suas escolhas',
+      'Uma capivara com óculos escuros',
+    ],
+  },
+  {
+    question: 'Se eu tivesse que fazer um cosplay ridículo, escolheria...',
+    options: [
+      'Abacaxi gigante',
+      'Pato de borracha',
+      'Salsicha do Scooby-Doo',
+      'Biscoito da Sorte Humano',
+    ],
+  },
+  {
+    question: 'Se eu tivesse que trocar meu nome por algo engraçado, seria...',
+    options: [
+      'Zé Bolacha',
+      'Capivara Supersônica',
+      'Dona Fofoca',
+      'Picles Espacial',
+    ],
+  },
+  {
+    question: 'Se eu fosse um sabor de sorvete bizarro, seria...',
+    options: [
+      'Sorvete de lasanha',
+      'Sorvete de coxinha',
+      'Sorvete de pipoca com caramelo',
+      'Sorvete de pão de alho',
+    ],
+  },
+  {
+    question: 'Se um alienígena me abduzisse, minha primeira pergunta seria...',
+    options: [
+      "'Tem Wi-Fi na nave?'",
+      "'Vocês aceitam PIX?'",
+      "'O que vocês fazem com os gados que somem?'",
+      "'Vocês vieram me buscar para a escola de Hogwarts alienígena?'",
+    ],
+  },
+  {
+    question: 'Se eu pudesse viajar no tempo, para onde iria?',
+    options: [
+      'Para o futuro e ver se o bolo de aniversário flutua',
+      'Para os anos 80 só para usar ombreiras exageradas',
+      'Para a Idade Média e ensinar cavaleiros a jogar videogame',
+      'Para 10 segundos atrás porque esqueci o que ia fazer',
+    ],
+  },
+  {
+    question:
+      'Se eu fosse um vilão de desenho animado, meu plano maligno seria...',
+    options: [
+      'Transformar toda comida do mundo em sorvete',
+      'Fazer com que segunda-feira tenha 48 horas',
+      'Roubar todos os chinelos do planeta',
+      'Trocar todas as senhas de Wi-Fi por enigmas impossíveis',
+    ],
+  },
+  {
+    question:
+      'Se eu fosse um animal não convencional de estimação, escolheria...',
+    options: [
+      'Um camaleão fashionista',
+      'Um porco que canta ópera',
+      'Uma capivara que joga videogame',
+      'Uma tartaruga que corre maratonas',
+    ],
+  },
+  {
+    question:
+      'Se eu pudesse adicionar uma regra estranha à sociedade, seria...',
+    options: [
+      'Toda reunião teria que começar com uma batalha de dancinha',
+      'Feriado toda quarta-feira só porque sim',
+      'A pizza obrigatoriamente teria que vir com borda recheada',
+      'Multa para quem andar devagar na escada rolante',
+    ],
+  },
+
   {
     question: 'Se eu pudesse escolher um encontro ideal, seria...',
     options: [
@@ -247,16 +418,16 @@ const allFunnyQuestions = [
 export const generateRandomQuestions = () => {
   const truthOrLie = [...allTruthOrLie]
     .sort(() => Math.random() - 0.5)
-    .slice(0, 10);
+    .slice(0, 5);
   const haveOrNever = [...allHaveOrNever]
     .sort(() => Math.random() - 0.5)
-    .slice(0, 10);
+    .slice(0, 5);
   const openEnded = [...allOpenEnded]
     .sort(() => Math.random() - 0.5)
     .slice(0, 7);
   const multipleChoice = [...allMultipleChoice]
     .sort(() => Math.random() - 0.5)
-    .slice(0, 8);
+    .slice(0, 18);
   const funnyQuestions = [...allFunnyQuestions]
     .sort(() => Math.random() - 0.5)
     .slice(0, 5); // 🔹 Adicionando 5 perguntas engraçadas

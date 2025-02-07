@@ -22,15 +22,19 @@ const Results: React.FC = () => {
 
   if (!gameData) return <p>Carregando resultados...</p>;
 
+  const questions = gameData.questions; // 🔹 Perguntas na ordem original
+  const correctAnswers = gameData.correctAnswers || {}; // 🔹 Respostas corretas no Firestore
+
   const countCorrectAnswers = (player: string) => {
     if (!gameData.responses[player]) return { correct: 0, incorrect: 0 };
 
     let correct = 0;
     let incorrect = 0;
 
-    Object.keys(gameData.responses[player]).forEach((question) => {
-      const userAnswer = gameData.responses[player][question];
-      const correctAnswer = gameData.correctAnswers?.[question];
+    questions.forEach((q: any) => {
+      const questionText = typeof q === 'string' ? q : q.question;
+      const userAnswer = gameData.responses[player]?.[questionText];
+      const correctAnswer = correctAnswers[questionText];
 
       if (userAnswer === correctAnswer) {
         correct++;
@@ -44,6 +48,36 @@ const Results: React.FC = () => {
 
   const pamResults = countCorrectAnswers('Pam');
   const carlosResults = countCorrectAnswers('Carlos');
+
+  const renderResults = (player: string) => {
+    if (!gameData.responses[player]) return <p>Nenhuma resposta registrada.</p>;
+
+    return questions.map((q: any, index: number) => {
+      const questionText = typeof q === 'string' ? q : q.question;
+      const userAnswer = gameData.responses[player]?.[questionText];
+      const correctAnswer = correctAnswers[questionText];
+      const isCorrect = userAnswer === correctAnswer;
+
+      return (
+        <div
+          key={index}
+          className={`p-3 rounded-md mb-2 flex items-center ${
+            isCorrect
+              ? 'bg-green-100 text-green-800'
+              : 'bg-red-100 text-red-800'
+          }`}
+        >
+          <span className='mr-2 text-xl'>{isCorrect ? '✅' : '❌'}</span>
+          <div>
+            <p className='font-semibold'>{questionText}</p>
+            <p className='text-gray-700'>
+              Resposta: {userAnswer || 'Sem resposta'}
+            </p>
+          </div>
+        </div>
+      );
+    });
+  };
 
   return (
     <div className='flex flex-col items-center min-h-screen bg-gradient-to-b from-blue-400 to-purple-500 text-white p-6'>
@@ -71,20 +105,7 @@ const Results: React.FC = () => {
             ? '🔼 Ocultar Respostas da Pam'
             : '🔽 Mostrar Respostas da Pam'}
         </button>
-        {showPamResults && (
-          <div className='mt-4'>
-            {Object.keys(gameData.responses.Pam || {}).map(
-              (question, index) => (
-                <div key={index} className='mb-2'>
-                  <p className='font-semibold'>{question}</p>
-                  <p className='text-blue-700'>
-                    Resposta: {gameData.responses.Pam[question]}
-                  </p>
-                </div>
-              )
-            )}
-          </div>
-        )}
+        {showPamResults && <div className='mt-4'>{renderResults('Pam')}</div>}
       </div>
 
       {/* Resultados do Carlos */}
@@ -98,18 +119,7 @@ const Results: React.FC = () => {
             : '🔽 Mostrar Respostas do Carlos'}
         </button>
         {showCarlosResults && (
-          <div className='mt-4'>
-            {Object.keys(gameData.responses.Carlos || {}).map(
-              (question, index) => (
-                <div key={index} className='mb-2'>
-                  <p className='font-semibold'>{question}</p>
-                  <p className='text-blue-700'>
-                    Resposta: {gameData.responses.Carlos[question]}
-                  </p>
-                </div>
-              )
-            )}
-          </div>
+          <div className='mt-4'>{renderResults('Carlos')}</div>
         )}
       </div>
     </div>
